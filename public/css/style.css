@@ -45,6 +45,7 @@ nav {
 
 .menu-content i {
     position: absolute;
+    right: 10%;
     display: none;
     font-size: 40px;
     cursor: pointer;
