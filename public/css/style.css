@@ -6,7 +6,7 @@
 }
 
 .loader {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
@@ -14,8 +14,22 @@
     display: flex;
 }
 
+.loaderBelow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 4;
+    display: flex;
+}
+
 .loader .side-left,
 .loader .side-right {
+    width: 50%;
+}
+
+.loaderBelow .side-left,
+.loaderBelow .side-right {
     width: 50%;
 }
 
@@ -36,8 +50,32 @@
 .loader .side-right .loader-two-up {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: rgb(39, 39, 39);
     z-index: 7;
+}
+
+.loaderBelow .side-left .loader-one-down,
+.loaderBelow .side-right .loader-two-down {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(40, 55, 99);
+    z-index: 6;
+}
+
+.loader-1 {
+    animation: goLeftLoader 1.5s ease-in;
+}
+
+.loader-2 {
+    animation: goLeftLoader 1.5s ease-in;
+}
+
+.loader-3 {
+    animation: goRightLoader 1.5s ease-in;
+}
+
+.loader-4 {
+    animation: goRightLoader 1.5s ease-in;
 }
 
 body {
@@ -231,7 +269,7 @@ span:hover:after {
 .introWeb-content .introduction .typing-demo-one {
     display: block;
     width: 17ch;
-    animation: typing 2s steps(17), blink .5s step-end infinite alternate;
+    animation: typing 1s steps(17), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -240,7 +278,7 @@ span:hover:after {
 .introWeb-content .introduction .typing-demo-two {
     display: block;
     width: 24.7ch;
-    animation: typing 2s steps(24), blink .5s step-end infinite alternate;
+    animation: typing 1s steps(24), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -381,6 +419,24 @@ span:hover:after {
     }
     100% {
         -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes goLeftLoader {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes goRightLoader {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
     }
 }
 
