@@ -364,13 +364,17 @@ span:hover:after {
         width: 100%;
     }
     .introWeb-content .image {
-        width: 60%;
+        width: 80%;
         margin: 0 auto;
     }
     .introWeb-content .introduction {
         display: flex;
         align-items: center;
-        font-size: 3vw;
+        font-size: 4vw;
+        margin-bottom: 50px;
+    }
+    .introWeb-content .introduction .introtext {
+        margin: 0 auto;
     }
 }
 
