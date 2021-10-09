@@ -62,13 +62,16 @@ window.addEventListener('resize', function(event) {
     }
     console.log(newHeight, newWidth);
 });
+//-------------------------------
+//When the website loads
+//-------------------------------
 
-//onload effect
 const loader = document.querySelector('.loader');
 const loaderBelow = document.querySelector('.loaderBelow');
 
 window.onload = () => {
     setTimeout(() => {
+        document.querySelector('.loadingText').style.display = 'none';
         const loader_one = document.querySelector('.loader-one-up'),
             loader_two = document.querySelector('.loader-two-up'),
             loader_three = document.querySelector('.loader-one-down'),
@@ -83,7 +86,7 @@ window.onload = () => {
             loader_four.classList.add('loader-4');
             setTimeout(() => {
                 loader.style.display = 'none';
-            }, 1200)
+            }, 700)
             setTimeout(() => {
                 loaderBelow.style.display = 'none';
                 let h1 = document.getElementById('second-writing');
@@ -94,7 +97,7 @@ window.onload = () => {
                     h1.classList.add('typing-demo-two');
                     document.querySelector('.typing-demo-two').style.border = 'none';
                 }, 1000);
-            }, 1500);
+            }, 1000);
         }, 300);
 
     }, 1500);

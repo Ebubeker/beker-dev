@@ -63,19 +63,19 @@
 }
 
 .loader-1 {
-    animation: goLeftLoader 1.5s ease-in;
+    animation: goLeftLoader 1s ease-in;
 }
 
 .loader-2 {
-    animation: goLeftLoader 1.5s ease-in;
+    animation: goLeftLoader 1s ease-in;
 }
 
 .loader-3 {
-    animation: goRightLoader 1.5s ease-in;
+    animation: goRightLoader 1s ease-in;
 }
 
 .loader-4 {
-    animation: goRightLoader 1.5s ease-in;
+    animation: goRightLoader 1s ease-in;
 }
 
 body {
@@ -117,7 +117,7 @@ nav {
 }
 
 .menu-content i {
-    position: absolute;
+    position: fixed;
     right: 10%;
     display: none;
     font-size: 40px;
