@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+nav {
+    display: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-Brand {
+    width: 35%;
+}
+
+.nav-Brand h1 {
+    font-size: 35px;
+}
+
+.menu-content {
+    width: 65%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.menu-content i {
+    position: absolute;
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.menu-content .menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu-content .menu li {
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.menu-content .menu li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(17, 17, 49);
+}
+
+
+/* line through menu items */
+
+span {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+span:before,
+span:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2.5px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: rgb(17, 17, 49);
+}
+
+span:before {
+    left: -2.5px;
+}
+
+span:after {
+    right: 2.5px;
+    background: rgb(17, 17, 49);
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span:hover:before {
+    background: rgb(17, 17, 49);
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+}
+
+
+/* Nav dropdown */
+
+.nav-dropdown {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    background-color: rgb(253, 253, 253);
+    display: none;
+    z-index: 2;
+}
+
+.getDown {
+    animation: bobble .8s ease-out forwards;
+}
+
+.getUp {
+    animation: upBobble .8s ease-out forwards;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+}
+
+.dropdown-menu li {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+}
+
+.blueStuff {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+    display: none;
+}
+
+.getDownBlue {
+    animation: bobble .65s ease-out forwards;
+}
+
+.getUpBlue {
+    animation: upBobble .6s ease-out forwards;
+}
+
+.introWeb {
+    margin-top: 20px;
+}
+
+.introWeb-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.introWeb-content .introduction,
+.introWeb-content .image {
+    width: 49%;
+}
+
+.introWeb-content .introduction {
+    display: flex;
+    align-items: center;
+    font-size: 33px;
+}
+
+.introWeb-content .introduction h1 {
+    display: none;
+}
+
+.introWeb-content .introduction .typing-demo-one {
+    display: block;
+    width: 17ch;
+    animation: typing 2s steps(19), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+
+.introWeb-content .introduction .typing-demo-two {
+    display: block;
+    width: 25ch;
+    animation: typing 2s steps(26), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+
+.introWeb img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Projects section */
+
+.projects {
+    margin-top: 160px;
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 160px;
+}
+
+.projects .project-content .card {
+    display: flex;
+    margin-right: 200px;
+    justify-content: center;
+}
+
+.projects .project-content .card-2 {
+    display: flex;
+    margin-left: 200px;
+    justify-content: center;
+}
+
+.project-card {
+    background-size: cover;
+    width: 800px;
+    height: 450px;
+    margin-bottom: 100px;
+}
+
+#one {
+    background-image: url('../img/project-1.jpg');
+}
+
+#two {
+    background-image: url('../img/project-2.jpg');
+}
+
+#three {
+    background-image: url('../img/project-3.jpg');
+}
+
+#four {
+    background-image: url('../img/project-4.jpg');
+}
+
+
+/* Responsivness */
+
+@keyframes bobble {
+    0% {
+        opacity: 1;
+        transform: translateY(-100%);
+        transition: ease-out;
+    }
+    /* 40% {
+        transform: translateY(-40%);
+        transition: ease-out;
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-25%);
+        transition: ease-out;
+    } */
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+        transition: ease-out;
+    }
+}
+
+@keyframes upBobble {
+    0% {
+        opacity: 1;
+        transform: translateY(0%);
+        transition: ease-out;
+    }
+    /* 40% {
+        transform: translateY(-40%);
+        transition: ease-out;
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-25%);
+        transition: ease-out;
+    } */
+    100% {
+        opacity: 1;
+        transform: translateY(-100%);
+        transition: ease-out;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+
+/* Start of responsivness */
+
+@media (max-width: 1535px) {
+    .menu-content .menu li {
+        font-size: 17px;
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 1224px) {
+    .menu-content i {
+        display: block;
+    }
+    .menu-content .menu {
+        display: none;
+    }
+    .nav-Brand {
+        width: 70%;
+    }
+    .menu-content {
+        width: 30%;
+    }
+}
+
+
+/* Mobile responsivness level */
+
+@media (max-width: 759px) {
+    .dropdown-menu li {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 579px) {
+    .nav-Brand h1 {
+        font-size: 30px;
+    }
+    .dropdown-menu li {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-Brand h1 {
+        font-size: 25px;
+    }
+    .dropdown-menu li {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-Brand h1 {
+        font-size: 21px;
+    }
+    .dropdown-menu li {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 350px) {
+    .nav-Brand h1 {
+        font-size: 18px;
+    }
+    .dropdown-menu li {
+        font-size: 17px;
+    }
+}
