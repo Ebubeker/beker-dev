@@ -62,3 +62,12 @@ window.addEventListener('resize', function(event) {
     }
     console.log(newHeight, newWidth);
 });
+
+//onload effect
+const loader = document.querySelector('.loader');
+
+window.onload = () => {
+    setTimeout(() => {
+        loader.style.display = 'none';
+    }, 1500);
+}
