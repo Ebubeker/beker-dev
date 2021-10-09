@@ -185,7 +185,7 @@ span:hover:after {
 .introWeb-content .introduction {
     display: flex;
     align-items: center;
-    font-size: 33px;
+    font-size: 1.9vw;
 }
 
 .introWeb-content .introduction h1 {
@@ -195,7 +195,7 @@ span:hover:after {
 .introWeb-content .introduction .typing-demo-one {
     display: block;
     width: 17ch;
-    animation: typing 2s steps(19), blink .5s step-end infinite alternate;
+    animation: typing 2s steps(17), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -203,8 +203,8 @@ span:hover:after {
 
 .introWeb-content .introduction .typing-demo-two {
     display: block;
-    width: 25ch;
-    animation: typing 2s steps(26), blink .5s step-end infinite alternate;
+    width: 24.7ch;
+    animation: typing 2s steps(24), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -263,7 +263,7 @@ span:hover:after {
 }
 
 
-/* Responsivness */
+/* Animation */
 
 @keyframes bobble {
     0% {
@@ -324,6 +324,12 @@ span:hover:after {
 
 /* Start of responsivness */
 
+@media screen and (min-width: 1600px) {
+    .introWeb-content .introduction {
+        font-size: 30px;
+    }
+}
+
 @media (max-width: 1535px) {
     .menu-content .menu li {
         font-size: 17px;
@@ -343,6 +349,27 @@ span:hover:after {
     }
     .menu-content {
         width: 30%;
+    }
+}
+
+@media (max-width: 1151px) {
+    .introWeb {
+        margin-top: 130px;
+    }
+    .introWeb-content {
+        display: block;
+    }
+    .introWeb-content .introduction {
+        width: 100%;
+    }
+    .introWeb-content .image {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .introWeb-content .introduction {
+        display: flex;
+        align-items: center;
+        font-size: 3vw;
     }
 }
 
