@@ -62,6 +62,7 @@ window.addEventListener('resize', function(event) {
     }
     console.log(newHeight, newWidth);
 });
+
 //-------------------------------
 //When the website loads
 //-------------------------------
@@ -89,14 +90,19 @@ window.onload = () => {
             }, 700)
             setTimeout(() => {
                 loaderBelow.style.display = 'none';
+
+                //loads the website design
+                let navbar = document.querySelector('.nav');
                 let h1 = document.getElementById('second-writing');
                 let h1_one = document.getElementById('first-writing');
                 h1_one.classList.add('typing-demo-one');
+                // navbar.classList.add('navAnimation');
                 setTimeout(() => {
                     document.querySelector('.typing-demo-one').style.border = 'none';
                     h1.classList.add('typing-demo-two');
                     document.querySelector('.typing-demo-two').style.border = 'none';
                 }, 1000);
+                //XXXX loads the website design XXXX
             }, 1000);
         }, 300);
 
