@@ -673,6 +673,12 @@ span:hover:after {
         padding: 5px 15px;
         font-size: 15px;
     }
+    .projects .project-content .card {
+        margin-right: 50px;
+    }
+    .projects .project-content .card-2 {
+        margin-left: 50px;
+    }
 }
 
 @media (max-width: 400px) {
