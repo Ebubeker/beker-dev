@@ -434,19 +434,28 @@ section hr {
 
 /* CV styling */
 
+.cv {
+    padding-bottom: 35px;
+}
+
 .cv .cv-content .row-one {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .cv .cv-content .row-one .languageKnowledge,
-.cv .cv-content .row-one .education {
+.cv .cv-content .row-one .education,
+.cv .cv-content .row-one .awards,
+.cv .cv-content .row-one .skills {
     width: 49%;
 }
 
 .cv .cv-content .row-one .languageKnowledge hr,
-.cv .cv-content .row-one .education hr {
-    width: 90%;
+.cv .cv-content .row-one .education hr,
+.cv .cv-content .row-two .experience hr,
+.cv .cv-content .row-one .awards hr,
+.cv .cv-content .row-one .skills hr {
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -454,23 +463,31 @@ section hr {
     margin-top: 10px;
 }
 
-.cv .cv-content .row-one .languageKnowledge .language .fill {
-    height: 10px;
-    width: 200px;
-    border: .5px solid black;
-    border-radius: 50px;
-    position: relative;
+.cv .cv-content .row-one {
+    margin-bottom: 30px;
 }
 
-.cv .cv-content .row-one .languageKnowledge .language .fill::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: blue;
-    clip-path: inset(0 50%);
+.cv .cv-content .row-two .experience {
+    width: 100%;
+}
+
+.cv .cv-content .row-two .experience .single-experience {
+    margin-bottom: 20px;
+}
+
+.cv .cv-content .row-two .experience .single-experience em {
+    color: rgb(44, 44, 44);
+    font-weight: 400;
+}
+
+.cv .cv-content .row-two .experience .single-experience p {
+    color: rgb(39, 39, 39);
+    font-weight: 500;
+}
+
+.cv .cv-content .row-one .awards h4,
+.cv .cv-content .row-one .skills h4 {
+    margin-bottom: 10px;
 }
 
 
