@@ -540,6 +540,85 @@ span:hover:after {
 }
 
 
+/* About me styling */
+
+.about .about-content .part-one,
+.about .about-content .part-two {
+    display: flex;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.about .about-content .part-one {
+    justify-content: space-between;
+}
+
+.about .about-content .part-two {
+    justify-content: space-around;
+}
+
+.about .about-content .part-one .rounded-photo {
+    width: 30%;
+    margin-left: 5%;
+}
+
+.about .about-content .part-one .history {
+    width: 70%;
+}
+
+.about .about-content .part-one .history h4 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.about .about-content .part-one .history p {
+    text-align: justify;
+    font-style: italic;
+    color: rgb(68, 68, 68);
+}
+
+.about .about-content .part-one .rounded-photo img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about .about-content .part-two .provide {
+    width: 23%;
+    background-color: rgb(233, 233, 233);
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.about .about-content .part-two .provide:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.about .about-content .part-two .provide .roundedImage {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.about .about-content .part-two .provide .box h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.about .about-content .part-two .provide .box p {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    font-size: 15px;
+}
+
+
 /* Animation */
 
 @keyframes bobble {
@@ -670,6 +749,16 @@ span:hover:after {
         width: 700px;
         height: 350px;
     }
+    /* About Section */
+    .about .about-content .part-one .rounded-photo {
+        width: 40%;
+    }
+    .about .about-content .part-one .history {
+        width: 60%;
+    }
+    .about .about-content .part-two .provide {
+        width: 30%;
+    }
 }
 
 @media (max-width: 1224px) {
@@ -706,6 +795,19 @@ span:hover:after {
         width: 100%;
         margin-bottom: 50px;
     }
+    /* About Section */
+    .about .about-content .part-one {
+        display: block;
+    }
+    .about .about-content .part-one .rounded-photo,
+    .about .about-content .part-one .history {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .about .about-content .part-one .rounded-photo {
+        text-align: center;
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 1151px) {
@@ -741,6 +843,13 @@ span:hover:after {
     .project-card {
         width: 500px;
         height: 300px;
+    }
+    .about .about-content .part-two {
+        display: block;
+    }
+    .about .about-content .part-two .provide {
+        width: 300px;
+        margin: 30px auto;
     }
 }
 
@@ -782,7 +891,7 @@ span:hover:after {
         font-size: 28px;
     }
     .project-card {
-        height: 180px;
+        height: 200px;
     }
     .project-card-content h1 {
         font-size: 20px;
