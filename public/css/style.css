@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -10,8 +11,10 @@
 }
 
 .diff-section-color {
-    background-color: rgba(242, 242, 235, 0.671);
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    /* background-color: rgba(242, 242, 235, 0.671); */
+    background-color: rgb(232, 232, 250);
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .loader {
@@ -591,6 +594,7 @@ span:hover:after {
     text-align: center;
     border-radius: 15px;
     cursor: pointer;
+    transition: box-shadow .15s ease-in;
 }
 
 .about .about-content .part-two .provide:hover {
@@ -616,6 +620,156 @@ span:hover:after {
     padding: 20px;
     text-align: left;
     font-size: 15px;
+}
+
+
+/* Contact Page */
+
+.contact .contact-content .contact-parts {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    align-items: center;
+}
+
+.contact .contact-content .contact-parts .contact-form form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contact .contact-content .contact-parts .contact-form form input,
+.contact .contact-content .contact-parts .contact-form form textarea,
+footer .footer-content .subscription-box form input {
+    display: block;
+    width: 450px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    margin-bottom: 30px;
+}
+
+.contact .contact-content .contact-parts .contact-form form .btn-submit {
+    padding: 14px 40px;
+    font-size: 17px;
+    border: none;
+    background-color: rgba(103, 103, 253, 0.842);
+    display: inline-block;
+    color: white;
+    text-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: background-color .45s;
+    cursor: pointer;
+}
+
+.contact .contact-content .contact-parts .contact-form form .btn-submit:hover {
+    background-color: rgba(84, 84, 223, 0.842);
+}
+
+.contact .contact-content .contact-parts .more-contacts {
+    width: 40%;
+}
+
+.contact .contact-content .contact-parts .more-contacts .contact-type {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .contact-parts .more-contacts .contact-type i,
+.contact .contact-content .contact-parts .more-contacts .contact-type .number {
+    width: 50%;
+    font-size: 23px;
+}
+
+.contact .contact-content .contact-parts .more-contacts .contact-type p {
+    width: 50%;
+    font-size: 23px;
+}
+
+.contact .contact-content .contact-parts .more-contacts .div-one,
+.contact .contact-content .contact-parts .more-contacts .empty {
+    height: 250px;
+}
+
+.contact .contact-content .contact-parts .more-contacts .empty {
+    background-color: rgb(232, 232, 250);
+    padding: 30px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.contact .contact-content .contact-parts .more-contacts .empty p {
+    margin-bottom: 20px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: rgb(232, 232, 250);
+    padding-bottom: 50px;
+    padding-top: 50px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .footer-content .first-links,
+footer .footer-content .contact-links,
+footer .footer-content .subscription-box {
+    width: 25%;
+}
+
+footer .footer-content .contact-links {
+    text-align: center;
+}
+
+footer .footer-content .first-links a,
+footer .footer-content .contact-links a {
+    text-decoration: none;
+    color: rgb(38, 38, 38);
+}
+
+footer .footer-content .first-links a {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: block;
+}
+
+footer .footer-content .contact-links a {
+    margin: 7px 20px;
+    font-size: 30px;
+}
+
+footer .footer-content .contact-links .number {
+    display: block;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+footer .footer-content .subscription-box {
+    display: flex;
+    justify-content: end;
+}
+
+footer .footer-content .subscription-box input {
+    display: block;
+}
+
+footer .footer-content .subscription-box .btn-submit {
+    padding: 14px 40px;
+    font-size: 17px;
+    border: none;
+    background-color: rgba(103, 103, 253, 0.842);
+    display: inline-block;
+    color: white;
+    text-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: background-color .45s;
+    cursor: pointer;
+}
+
+footer .footer-content .subscription-box form h3 {
+    margin-bottom: 25px;
 }
 
 
@@ -759,6 +913,10 @@ span:hover:after {
     .about .about-content .part-two .provide {
         width: 30%;
     }
+    .contact .contact-content .contact-parts .contact-form form input,
+    .contact .contact-content .contact-parts .contact-form form textarea {
+        width: 350px;
+    }
 }
 
 @media (max-width: 1224px) {
@@ -808,6 +966,37 @@ span:hover:after {
         text-align: center;
         margin-left: 0;
     }
+    /* contact section */
+    .contact .contact-content .contact-parts .more-contacts .contact-type i,
+    .contact .contact-content .contact-parts .more-contacts .contact-type .number {
+        width: 50%;
+        font-size: 19px;
+    }
+    .contact .contact-content .contact-parts .more-contacts .contact-type p {
+        width: 50%;
+        font-size: 19px;
+    }
+    /* footer section */
+    footer .footer-content {
+        display: block;
+    }
+    footer .footer-content .first-links,
+    footer .footer-content .contact-links,
+    footer .footer-content .subscription-box {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    footer .footer-content .subscription-box {
+        text-align: left;
+        display: block;
+    }
+    footer .footer-content .subscription-box form {
+        text-align: center;
+    }
+    footer .footer-content .subscription-box form input {
+        display: block;
+    }
 }
 
 @media (max-width: 1151px) {
@@ -837,6 +1026,15 @@ span:hover:after {
         width: 600px;
         height: 300px;
     }
+    .contact .contact-content .contact-parts .more-contacts .contact-type i,
+    .contact .contact-content .contact-parts .more-contacts .contact-type .number {
+        width: 50%;
+        font-size: 15px;
+    }
+    .contact .contact-content .contact-parts .more-contacts .contact-type p {
+        width: 50%;
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -850,6 +1048,30 @@ span:hover:after {
     .about .about-content .part-two .provide {
         width: 300px;
         margin: 30px auto;
+    }
+    .contact .contact-content .contact-parts {
+        display: block;
+    }
+    .contact .contact-content .contact-parts .more-contacts,
+    .contact .contact-content .contact-parts .contact-form {
+        width: 100%;
+        margin: 50px auto;
+    }
+    .contact .contact-content .contact-parts .contact-form form input,
+    .contact .contact-content .contact-parts .contact-form form textarea {
+        width: 100%;
+    }
+    .contact .contact-content .contact-parts .more-contacts .contact-type {
+        justify-content: center;
+    }
+    .contact .contact-content .contact-parts .more-contacts .contact-type i,
+    .contact .contact-content .contact-parts .more-contacts .contact-type .number {
+        width: 30%;
+        font-size: 13px;
+    }
+    .contact .contact-content .contact-parts .more-contacts .contact-type p {
+        width: 30%;
+        font-size: 13px;
     }
 }
 
@@ -900,6 +1122,15 @@ span:hover:after {
     .project-card-content .slogan {
         padding: 10px 10px;
         font-size: 11px;
+    }
+    .contact .contact-content .contact-parts .more-contacts .contact-type i,
+    .contact .contact-content .contact-parts .more-contacts .contact-type .number {
+        width: 50%;
+        text-align: left;
+    }
+    .contact .contact-content .contact-parts .more-contacts .contact-type p {
+        width: 50%;
+        text-align: right;
     }
 }
 
