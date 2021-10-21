@@ -1,0 +1,102 @@
+footer .footer-content .subscription-box form input {
+    display: block;
+    width: 450px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: rgb(232, 232, 250);
+    padding-bottom: 50px;
+    padding-top: 50px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .footer-content .first-links,
+footer .footer-content .contact-links,
+footer .footer-content .subscription-box {
+    width: 25%;
+}
+
+footer .footer-content .contact-links {
+    text-align: center;
+}
+
+footer .footer-content .first-links a,
+footer .footer-content .contact-links a {
+    text-decoration: none;
+    color: rgb(38, 38, 38);
+}
+
+footer .footer-content .first-links a {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: block;
+}
+
+footer .footer-content .contact-links a {
+    margin: 7px 20px;
+    font-size: 30px;
+}
+
+footer .footer-content .contact-links .number {
+    display: block;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+footer .footer-content .subscription-box {
+    display: flex;
+    justify-content: end;
+}
+
+footer .footer-content .subscription-box input {
+    display: block;
+}
+
+footer .footer-content .subscription-box .btn-submit {
+    padding: 14px 40px;
+    font-size: 17px;
+    border: none;
+    background-color: rgba(103, 103, 253, 0.842);
+    display: inline-block;
+    color: white;
+    text-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: background-color .45s;
+    cursor: pointer;
+}
+
+footer .footer-content .subscription-box form h3 {
+    margin-bottom: 25px;
+}
+
+@media (max-width: 1224px) {
+    /* footer section */
+    footer .footer-content {
+        display: block;
+    }
+    footer .footer-content .first-links,
+    footer .footer-content .contact-links,
+    footer .footer-content .subscription-box {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    footer .footer-content .subscription-box {
+        text-align: left;
+        display: block;
+    }
+    footer .footer-content .subscription-box form {
+        text-align: center;
+    }
+    footer .footer-content .subscription-box form input {
+        display: block;
+    }
+}

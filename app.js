@@ -21,5 +21,9 @@ app.get('/home', (req, res) => {
     res.render('index', { title: "Home" });
 });
 
+app.get('/admin22042004', (req, res) => {
+    res.render('admin', { title: "Admin" });
+});
+
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
