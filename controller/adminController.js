@@ -2,6 +2,7 @@ const Projects = require('../model/projects');
 const Cv = require('../model/cv');
 const About = require('../model/about');
 const User = require('../model/user');
+const Email = require('../model/subscription');
 
 let getAdmin = (req, res) => {
 
@@ -237,5 +238,19 @@ let postRequestAbout = (req, res) => {
         .catch((err) => console.log(err))
 }
 
+let subscription = (req, res) => {
+    const email = req.body.email;
 
-module.exports = { getAdmin, getProducts, getCv, getAbout, postRequestProjects, postRequestCv, postRequestAbout, login, postLogin };
+    const emailer = new Email({ email });
+
+    emailer.save()
+        .then((result) => {
+            res.redirect('/home');
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+
+}
+
+module.exports = { getAdmin, getProducts, getCv, getAbout, postRequestProjects, postRequestCv, postRequestAbout, login, postLogin, subscription };

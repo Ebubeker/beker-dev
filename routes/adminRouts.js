@@ -36,5 +36,7 @@ router.post('/editAbout', adminController.postRequestAbout);
 
 router.post('/login', adminController.postLogin);
 
+router.post('/home', adminController.subscription);
+
 
 module.exports = router;
