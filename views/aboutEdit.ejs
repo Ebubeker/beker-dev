@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/edit.css">
+</head>
+
+<body>
+
+    <a href="/admin22042004" class="btn-submit">Go Back</a>
+
+    <h1>Edit About & Contact</h1>
+
+
+    <% let number = 1 %>
+
+        <% about.forEach((abt)=>{ %>
+
+            <section class="edit">
+                <div class="container">
+                    <form action="/editAbout" method="POST">
+
+                        <input type="text" name="aboutImage" placeholder="Image Url" value="<%= abt.aboutPhoto %> ">
+
+                        <textarea name="myHistory" placeholder="History"><%= abt.myHistory %> </textarea>
+
+                        <h3>Social Media Links</h3>
+                        <input type="text" name="instagramUsername" placeholder="Instagram Name" value="<%= abt.socialLinks.instagram.username %> ">
+                        <input type="text" name="instagramLink" placeholder="Instagram Link" value="<%= abt.socialLinks.instagram.urlAddress %> ">
+
+                        <input type="text" name="linkdinUsername" placeholder="Linkdin Name" value="<%= abt.socialLinks.linkdin.username %> ">
+                        <input type="text" name="linkdinLink" placeholder="Linkdin Link" value="<%= abt.socialLinks.linkdin.urlAddress %> ">
+
+                        <input type="text" name="twitterUsername" placeholder="Twitter Name" value="<%= abt.socialLinks.twitter.username %> ">
+                        <input type="text" name="twitterLink" placeholder="Twitter Link" value="<%= abt.socialLinks.twitter.urlAddress %> ">
+
+                        <input type="text" name="favebookUsername" placeholder="Facebook Name" value="<%= abt.socialLinks.facebook.username %> ">
+                        <input type="text" name="facebookLink" placeholder="Facebook Link" value="<%= abt.socialLinks.facebook.urlAddress %> ">
+
+                        <input type="text" name="githubUsername" placeholder="Github Name" value="<%= abt.socialLinks.github.username %> ">
+                        <input type="text" name="githubLink" placeholder="Github Link" value="<%= abt.socialLinks.github.urlAddress %> ">
+
+                        <input type="text" name="number" placeholder="Number" value="<%= abt.socialLinks.phoneNumber.number %> ">
+
+                        <button type="submit" class="btn-submit">Confirm Edit</button>
+                    </form>
+                </div>
+            </section>
+
+
+            <% number++ %>
+
+                <%}) %>
+
+
+                    <!-- Footer -->
+                    <%- include('./partials/footer') %>
+</body>
+
+</html>

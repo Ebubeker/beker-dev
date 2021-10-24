@@ -34,50 +34,26 @@
                 <h1 class="section-title">Projects Dashboard</h1>
 
                 <div class="edit-btn">
-                    <a href="" class="btn-submit">Edit</a>
+                    <a href="/editProject" class="btn-submit">Edit</a>
                 </div>
 
                 <div class="content">
                     <!-- projects -->
-                    <div class="project border">
-                        <div class="photo">
-                            <img src="img/project-1.jpg" alt="">
+                    <% products.forEach((prod) => { %>
+                        <div class="project border">
+                            <div class="photo">
+                                <img src="<%= prod.image %>" alt="">
+                            </div>
+                            <div class="box">
+                                <h4 class="project-title">
+                                    <%=prod.title%>
+                                </h4>
+                                <p class="slogan">
+                                    <%= prod.slogan %>
+                                </p>
+                            </div>
                         </div>
-                        <div class="box">
-                            <h4 class="project-title">Alha website</h4>
-                            <p class="slogan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi tempora libero odio impedit sequi.</p>
-                        </div>
-                    </div>
-
-                    <div class="project border">
-                        <div class="photo">
-                            <img src="img/project-2.jpg" alt="">
-                        </div>
-                        <div class="box">
-                            <h4 class="project-title">Alha website</h4>
-                            <p class="slogan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi tempora libero odio impedit sequi.</p>
-                        </div>
-                    </div>
-
-                    <div class="project border">
-                        <div class="photo">
-                            <img src="img/project-3.jpg" alt="">
-                        </div>
-                        <div class="box">
-                            <h4 class="project-title">Alha website</h4>
-                            <p class="slogan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi tempora libero odio impedit sequi.</p>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <div class="photo">
-                            <img src="img/project-4.jpg" alt="">
-                        </div>
-                        <div class="box">
-                            <h4 class="project-title">Alha website</h4>
-                            <p class="slogan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi tempora libero odio impedit sequi.</p>
-                        </div>
-                    </div>
+                        <%}); %>
 
                 </div>
 
@@ -94,118 +70,142 @@
                 <h1 class="section-title">CV Dashboard</h1>
 
                 <div class="edit-btn">
-                    <a href="" class="btn-submit">Edit</a>
+                    <a href="/editCv" class="btn-submit">Edit</a>
                 </div>
 
-                <div class="row-one">
+                <% cv.forEach((corric)=>{ %>
+                    <div class="row-one">
 
-                    <div class="profile border">
-                        <h2>Profile</h2>
-                        <div class="item">
-                            <img src="img/ebubeker.jpg" alt="" class="paddingRight">
-                            <p>Profile Picture</p>
+                        <div class="profile border">
+                            <h2>Profile</h2>
+                            <div class="item">
+                                <img src="<%= corric.profileImage %> " alt="" class="paddingRight">
+                                <p>Profile Picture</p>
+                            </div>
+                            <div class="item">
+                                <h4 class="paddingRight">Introduction</h4>
+                                <p>
+                                    <%= corric.smallIntroduction %>
+                                </p>
+                            </div>
                         </div>
-                        <div class="item">
-                            <h4 class="paddingRight">Introduction</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, tempore ipsam? Aut, rem? Veniam minus libero, consectetur amet est vero iusto perspiciatis voluptatem nulla animi, dolore modi, quos natus atque doloribus
-                                consequatur deserunt sit quaerat reiciendis deleniti possimus eius nobis? Consectetur labore non aut corrupti explicabo illum adipisci atque impedit, quae, doloribus officia! Suscipit veniam inventore provident cumque sit
-                                dolores eius velit, dolorum assumenda quis minima commodi corrupti dignissimos magni atque quod accusamus porro? Reiciendis sit ut, earum dolor ipsum non eos ratione? Quam quas consectetur dolore animi fuga, vero eveniet?
-                                Vero facere veniam rerum officia dolor ad, soluta beatae eaque. Porro, excepturi dignissimos a sint quaerat officiis magni, cumque quae quisquam nemo minus delectus ratione nesciunt asperiores ut alias. Repellendus facilis
-                                reiciendis eaque nam est. In maiores ex vitae delectus eligendi excepturi nulla perferendis veritatis neque quo perspiciatis esse numquam minima architecto quia, cum autem animi reiciendis sed quod. Ex saepe esse, veritatis
-                                debitis distinctio est unde assumenda? Accusantium rerum voluptates quibusdam culpa labore similique unde earum dignissimos fugiat porro nobis, eaque iure consequuntur doloremque beatae facilis facere? Enim mollitia reprehenderit
-                                dolorum, repudiandae error aliquid sequi quo eos animi minima debitis corrupti alias delectus cumque cum omnis necessitatibus repellat.</p>
-                        </div>
-                    </div>
-                    <div class="prglanguages border">
-                        <h2>Languages</h2>
+                        <div class="prglanguages border">
+                            <h2>Languages</h2>
 
-                        <div class="item">
-                            <h4 class="paddingRight">HTML5</h4>
-                            <p>Value 70%</p>
-                        </div>
-                        <div class="item">
-                            <h4 class="paddingRight">CSS3</h4>
-                            <p>Value 70%</p>
-                        </div>
-                        <div class="item">
-                            <h4 class="paddingRight">JavaScript</h4>
-                            <p>Value 70%</p>
-                        </div>
-                        <div class="item">
-                            <h4 class="paddingRight">C++</h4>
-                            <p>Value 70%</p>
-                        </div>
-                        <div class="item">
-                            <h4 class="paddingRight">Reaxt JS</h4>
-                            <p>Value 70%</p>
-                        </div>
-                        <div class="item">
-                            <h4 class="paddingRight">Node JS/Express JS</h4>
-                            <p>Value 70%</p>
-                        </div>
-                    </div>
-                    <div class="education">
-                        <h2>Education</h2>
+                            <% let n = 1  %>
 
-                        <div class="item">
-                            <h4 class="paddingRight">High School</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sit recusandae tempora quibusdam. Quas neque cum fugiat magni officiis at perspiciatis voluptatem! Perferendis eaque a ratione molestias sapiente vitae rem!</p>
-                        </div>
-                    </div>
+                                <% for( let lang in corric.languages ) { %>
 
-                </div>
-
-                <div class="row-two">
-                    <div class="experience border">
-                        <h2>Experience</h2>
-                        <div class="item">
-                            <h4 class="paddingRight">ALHA website</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolores sed nulla ipsam dolore suscipit.</p>
+                                    <% if (corric.languages[lang].name !== " ") { %>
+                                        <div class="item">
+                                            <h4 class="paddingRight">
+                                                <%= corric.languages[lang].name  %>
+                                            </h4>
+                                            <p>
+                                                <%= corric.languages[lang].value  %>
+                                            </p>
+                                        </div>
+                                        <% if (n === 7) { %>
+                                            <% break%>
+                                                <% } %>
+                                                    <% n++ %>
+                                                        <% } %>
+                                                            <%}%>
                         </div>
-                        <div class="item">
-                            <h4 class="paddingRight">Collaboration assistent start up</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolores sed nulla ipsam dolore suscipit.</p>
+                        <div class="education">
+                            <h2>Education</h2>
+
+                            <div class="item">
+                                <h4 class="paddingRight">
+                                    <%= corric.education.type %>
+                                </h4>
+                                <p>
+                                    <%= corric.education.description %>
+                                </p>
+                            </div>
                         </div>
 
                     </div>
-                    <div class="awards border">
-                        <h2>Awards</h2>
 
-                        <div class="item">
-                            <h4 class="paddingRight">HTML5</h4>
-                            <p>Value 70%</p>
+                    <div class="row-two">
+                        <div class="experience border">
+                            <h2>Experience</h2>
+
+                            <% n=1  %>
+
+                                <% for( let exp in corric.experience ) { %>
+
+                                    <% if (corric.experience[exp].name !== " ") { %>
+
+                                        <div class="item">
+                                            <h4 class="paddingRight">
+                                                <%= corric.experience[exp].name %>
+                                            </h4>
+                                            <p>
+                                                <%= corric.experience[exp].description %>
+                                            </p>
+                                        </div>
+                                        <% if (n === 3) { %>
+                                            <% break%>
+                                                <% } %>
+                                                    <% n++ %>
+                                                        <% } %>
+                                                            <%}%>
+
                         </div>
-                        <div class="item">
-                            <h4 class="paddingRight">CSS3</h4>
-                            <p>Value 70%</p>
+                        <div class="awards border">
+                            <h2>Awards</h2>
+
+
+
+                            <% n=1  %>
+
+                                <% for( let award in corric.awards ) { %>
+
+                                    <% if (corric.awards[award] !== " ") { %>
+
+                                        <div class="item">
+                                            <h4 class="paddingRight">
+                                                <%= corric.awards[award] %>
+                                            </h4>
+                                        </div>
+                                        <% } %>
+                                            <% if (n === 7) { %>
+                                                <% break%>
+                                                    <% } %>
+                                                        <% n++ %>
+                                                            <%}%>
                         </div>
-                        <div class="item">
-                            <h4 class="paddingRight">JavaScript</h4>
-                            <p>Value 70%</p>
+                        <div class="skills">
+                            <h2>Skills</h2>
+
+                            <% n=1  %>
+
+                                <% for( let skll in corric.skills ) { %>
+
+                                    <% if (corric.skills[skll] !== " ") { %>
+
+                                        <div class="item">
+                                            <h4 class="paddingRight">
+                                                <%= corric.skills[skll] %>
+                                            </h4>
+                                        </div>
+                                        <% } %>
+                                            <% if (n === 7) { %>
+                                                <% break%>
+                                                    <% } %>
+                                                        <% n++ %>
+                                                            <%}%>
+
+                                                                <!-- <div class="item">
+                                <h4 class="paddingRight">High School</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sit recusandae tempora quibusdam. Quas neque cum fugiat magni officiis at perspiciatis voluptatem! Perferendis eaque a ratione molestias sapiente vitae rem!</p>
+                            </div> -->
                         </div>
-                        <div class="item">
-                            <h4 class="paddingRight">C++</h4>
-                            <p>Value 70%</p>
-                        </div>
-                        <div class="item">
-                            <h4 class="paddingRight">Reaxt JS</h4>
-                            <p>Value 70%</p>
-                        </div>
-                        <div class="item">
-                            <h4 class="paddingRight">Node JS/Express JS</h4>
-                            <p>Value 70%</p>
-                        </div>
+
                     </div>
-                    <div class="skills">
-                        <h2>Skills</h2>
+                    <%})%>
 
-                        <div class="item">
-                            <h4 class="paddingRight">High School</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sit recusandae tempora quibusdam. Quas neque cum fugiat magni officiis at perspiciatis voluptatem! Perferendis eaque a ratione molestias sapiente vitae rem!</p>
-                        </div>
-                    </div>
-
-                </div>
 
             </div>
         </div>
@@ -217,43 +217,66 @@
         <div class="container">
             <div class="ad-content">
 
-                <h1 class="section-title">Projects Dashboard</h1>
+                <h1 class="section-title">About Dashboard</h1>
 
                 <div class="edit-btn">
-                    <a href="" class="btn-submit">Edit</a>
+                    <a href="/editAbout" class="btn-submit">Edit</a>
                 </div>
 
                 <div class="content">
                     <!-- projects -->
-                    <div class="my-history border">
-                        <h2>About</h2>
-                        <div class="item">
-                            <h3>My history</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio cumque nam laudantium, at rerum nisi provident voluptates delectus voluptas quo molestias inventore eaque ipsum. Quasi obcaecati earum harum aperiam veniam totam
-                                sequi facilis officiis autem nulla ea illum itaque ipsa animi, cum tempora necessitatibus! Magnam magni deserunt commodi repellat.</p>
-                        </div>
-                    </div>
 
-                    <div class="social-media-links">
-                        <h2>Social Media</h2>
-                        <div class="item">
-                            <h3>Instagram</h3>
-                            <p>@bekerdeveloper | https.instagram.com</p>
-                        </div>
-                        <div class="item">
-                            <h3>Linkdin</h3>
-                            <p>@bekerdeveloper | https.instagram.com</p>
-                        </div>
-                        <div class="item">
-                            <h3>Twitter</h3>
-                            <p>@bekerdeveloper | https.instagram.com</p>
-                        </div>
-                        <div class="item">
-                            <h3>Number</h3>
-                            <p>@bekerdeveloper | https.instagram.com</p>
+                    <% about.forEach((abt)=>{%>
+
+                        <div class="my-history border">
+                            <h2>About</h2>
+                            <div class="item">
+                                <h3>My history</h3>
+                                <p>
+                                    <%= abt.myHistory %>
+                                </p>
+                            </div>
                         </div>
 
-                    </div>
+                        <div class="social-media-links">
+                            <h2>Social Media</h2>
+
+                            <% n=1  %>
+
+                                <% for( let social in abt.socialLinks ) { %>
+
+                                    <% if (abt.socialLinks[social].username !== " ") { %>
+
+
+                                        <% if (n === 6) { %>
+                                            <div class="item">
+                                                <h3>
+                                                    <%= social %>
+                                                </h3>
+                                                <p>
+                                                    <%= abt.socialLinks[social].number %>
+                                                </p>
+                                            </div>
+                                            <% break%>
+                                                <% }else {%>
+
+                                                    <div class="item">
+                                                        <h3>
+                                                            <%= social %>
+                                                        </h3>
+                                                        <p>
+                                                            <%= abt.socialLinks[social].username %> |
+                                                                <%= abt.socialLinks[social].urlAddress %>
+                                                        </p>
+                                                    </div>
+                                                    <%}%>
+                                                        <% n++ %>
+                                                            <% } %>
+                                                                <%}%>
+
+                        </div>
+                        <%})  %>
+
 
                 </div>
 

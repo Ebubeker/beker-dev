@@ -121,7 +121,13 @@ nav {
     padding: 70px 0;
 }
 
-.project-Dashboard .pd-content .content,
+.project-Dashboard .pd-content .content {
+    border-top: 3px solid rgb(173, 182, 206);
+    border-left: 3px solid rgb(173, 182, 206);
+    border-right: 3px solid rgb(173, 182, 206);
+    border-radius: 5px;
+}
+
 .cv-Dashboard .cvd-content .row-one,
 .cv-Dashboard .cvd-content .row-two,
 .about-Dashboard .ad-content .content {
@@ -193,6 +199,13 @@ nav {
     width: 80px;
     height: 80px;
     object-fit: cover;
+}
+
+.cv-Dashboard .cvd-content .row-two .awards .item h4,
+.cv-Dashboard .cvd-content .row-two .skills .item h4 {
+    width: 100%;
+    text-align: center;
+    margin: 0;
 }
 
 .cv-Dashboard .cvd-content .row-one .item h4,

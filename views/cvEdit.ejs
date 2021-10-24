@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/edit.css">
+</head>
+
+<body>
+    <a href="/admin22042004" class="btn-submit">Go Back</a>
+
+
+    <h1>Edit Cv</h1>
+    <% let number = 1 %>
+
+        <% cv.forEach((cv)=>{ %>
+            <section class="edit">
+                <div class="container">
+                    <form action="/editCv" method="POST">
+                        <input type="text" name="profileImg" placeholder="Image" value="<%= cv.profileImage %> ">
+                        <textarea type="text" name="description" placeholder="Description"><%= cv.smallIntroduction %> </textarea>
+                        <h3>Languages</h3>
+                        <input type="text" name="lang1Name" placeholder="language 1" value="<%= cv.languages.lang1.name %>">
+                        <input type="text" name="lang1value" placeholder="language 1" value="<%= cv.languages.lang1.value %>">
+
+                        <input type="text" name="lang2Name" placeholder="language 2" value="<%= cv.languages.lang2.name %>">
+                        <input type="text" name="lang2value" placeholder="language 2" value="<%= cv.languages.lang2.value %>">
+
+                        <input type="text" name="lang3Name" placeholder="language 3" value="<%= cv.languages.lang3.name %>">
+                        <input type="text" name="lang3value" placeholder="language 3" value="<%= cv.languages.lang3.value %>">
+
+                        <input type="text" name="lang4Name" placeholder="language 4" value="<%= cv.languages.lang4.name %>">
+                        <input type="text" name="lang4value" placeholder="language 4" value="<%= cv.languages.lang4.value %>">
+
+                        <input type="text" name="lang5Name" placeholder="language 5" value="<%= cv.languages.lang5.name %>">
+                        <input type="text" name="lang5value" placeholder="language 5" value="<%= cv.languages.lang5.value %>">
+
+                        <input type="text" name="lang6Name" placeholder="language 6" value="<%= cv.languages.lang6.name %>">
+                        <input type="text" name="lang6value" placeholder="language 6" value="<%= cv.languages.lang6.value %>">
+
+                        <input type="text" name="lang7Name" placeholder="language 7" value="<%= cv.languages.lang7.name %>">
+                        <input type="text" name="lang7value" placeholder="language 7" value="<%= cv.languages.lang7.value %>">
+
+                        <h3>Education</h3>
+
+                        <input type="text" name="edname" placeholder="type" value="<%= cv.education.type %>">
+                        <input type="text" name="eddate" placeholder="date" value="<%= cv.education.date %>">
+                        <input type="text" name="eddescription" placeholder="description" value="<%= cv.education.description %>">
+
+                        <h3>Experience</h3>
+
+                        <input type="text" name="exp_1Name" placeholder="exoerience 1 name" value="<%= cv.experience.exp_1.name %>">
+                        <textarea type="text" name="exp_1Description" placeholder="exoerience 1 description"><%= cv.experience.exp_1.description %> </textarea>
+
+                        <input type="text" name="exp_2Name" placeholder="exoerience 2 name" value="<%= cv.experience.exp_2.name %>">
+                        <textarea type="text" name="exp_2Description" placeholder="exoerience 2 description"><%= cv.experience.exp_2.description %> </textarea>
+
+                        <input type="text" name="exp_3Name" placeholder="exoerience 3 name" value="<%= cv.experience.exp_3.name %>">
+                        <textarea type="text" name="exp_3Description" placeholder="exoerience 3 description"><%= cv.experience.exp_3.description %> </textarea>
+
+                        <h3>Awards</h3>
+
+                        <input type="text" name="aw_1" placeholder="award 1" value="<%= cv.awards.aw_1 %>">
+                        <input type="text" name="aw_2" placeholder="award 2" value="<%= cv.awards.aw_2 %>">
+                        <input type="text" name="aw_3" placeholder="award 3" value="<%= cv.awards.aw_3 %>">
+                        <input type="text" name="aw_4" placeholder="award 4" value="<%= cv.awards.aw_4 %>">
+                        <input type="text" name="aw_5" placeholder="award 5" value="<%= cv.awards.aw_5 %>">
+                        <input type="text" name="aw_6" placeholder="award 6" value="<%= cv.awards.aw_6 %>">
+                        <input type="text" name="aw_7" placeholder="award 7" value="<%= cv.awards.aw_7 %>">
+
+                        <h3>Skills</h3>
+
+                        <input type="text" name="sk_1" placeholder="skill 1" value="<%= cv.skills.sk_1 %>">
+                        <input type="text" name="sk_2" placeholder="skill 2" value="<%= cv.skills.sk_2 %>">
+                        <input type="text" name="sk_3" placeholder="skill 3" value="<%= cv.skills.sk_3 %>">
+                        <input type="text" name="sk_4" placeholder="skill 4" value="<%= cv.skills.sk_4 %>">
+                        <input type="text" name="sk_5" placeholder="skill 5" value="<%= cv.skills.sk_5 %>">
+                        <input type="text" name="sk_6" placeholder="skill 6" value="<%= cv.skills.sk_6 %>">
+                        <input type="text" name="sk_7" placeholder="skill 7" value="<%= cv.skills.sk_7 %>">
+
+                        <button type="submit" class="btn-submit">Confirm Edit</button>
+                    </form>
+                </div>
+            </section>
+            <% number++ %>
+
+                <%}) %>
+
+
+                    <!-- Footer -->
+                    <%- include('./partials/footer') %>
+</body>
+
+</html>
